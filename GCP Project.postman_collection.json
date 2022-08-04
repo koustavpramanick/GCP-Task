@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "3959145b-7da5-446a-adf3-d0e7fa94de27",
+		"name": "GCP Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Koustav\",\r\n    \"address\":\"Kolkata\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/saveCustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"saveCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/getAllCustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getAllCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get customer by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/getAllCustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getAllCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": \"2\",\r\n    \"orderPrice\": \"30000\",\r\n    \"orderName\": \"Mobile\",\r\n    \"orderQty\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/saveOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"saveOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": \"2\",\r\n    \"orderPrice\": \"30000\",\r\n    \"orderName\": \"Mobile\",\r\n    \"orderQty\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/getAllOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"getAllOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": \"2\",\r\n    \"orderPrice\": \"30000\",\r\n    \"orderName\": \"Mobile\",\r\n    \"orderQty\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/getOrder/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"getOrder",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order for customerId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": \"2\",\r\n    \"orderPrice\": \"30000\",\r\n    \"orderName\": \"Mobile\",\r\n    \"orderQty\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/getOrder/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"getOrder",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save Delivery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deliveryId\":\"100\",\r\n    \"deliveryStatus\":\"PROCESSING\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/saveDelivery",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"saveDelivery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Deliveries",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Koustav\",\r\n    \"address\":\"Kolkata\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/getAllDelivery",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"getAllDelivery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Delivery by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Koustav\",\r\n    \"address\":\"Kolkata\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/getDelivery/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"getDelivery",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Delivery for Order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Koustav\",\r\n    \"address\":\"Kolkata\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/getDelivery/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"getDelivery",
+						"100"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "customer-service",
+			"value": "34.171.189.238",
+			"type": "default"
+		},
+		{
+			"key": "order-service",
+			"value": "34.66.118.30",
+			"type": "default"
+		},
+		{
+			"key": "delivery-service",
+			"value": "35.223.196.225",
+			"type": "default"
+		}
+	]
+}

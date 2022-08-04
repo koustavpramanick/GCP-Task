@@ -1,0 +1,43 @@
+package com.example.demo.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.example.demo.model.Delivery;
+import com.example.demo.repository.DeliveryRepo;
+
+public class DeliveryController {
+	
+	@Autowired
+	DeliveryRepo deliveryRepo;
+	
+	@PostMapping("/saveDelivery")
+	public Delivery saveDelivery(@RequestBody Delivery delivery) {
+		Delivery deli = deliveryRepo.save(delivery);
+		if (deli != null) {
+			return deli;
+		} else {
+			return null;
+		}
+
+	}
+	
+	@GetMapping("/getAllDelivery")
+	public List<Delivery> getAllDelivery(){
+		List<Delivery> deliveries = deliveryRepo.findAll();
+		return deliveries;
+	}
+	
+	@GetMapping("/getDelivery/{id}")
+	public Delivery getDelivery(@PathVariable String id){
+		Optional<Delivery> delivery = deliveryRepo.findById(id);
+		return delivery.get();
+	}
+
+}

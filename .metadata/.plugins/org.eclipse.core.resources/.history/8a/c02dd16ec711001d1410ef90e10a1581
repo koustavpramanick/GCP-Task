@@ -1,0 +1,16 @@
+package com.koustav.model;
+
+import java.time.LocalDate;
+
+import javax.persistence.*;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Getter @Setter @ToString
+public class Delivery {
+	private String deliveryDetails;
+	private String deliveryStatus;
+}

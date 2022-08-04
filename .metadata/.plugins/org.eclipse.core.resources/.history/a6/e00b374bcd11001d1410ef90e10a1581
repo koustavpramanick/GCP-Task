@@ -1,0 +1,38 @@
+package com.example.demo.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.example.demo.model.Order;
+
+public class OrderController {
+	
+	@PostMapping("/saveOrder")
+	public Order saveOrder(@RequestBody Order Order) {
+		Order cust = orderRepo.save(Order);
+		if (cust != null) {
+			return cust;
+		} else {
+			return null;
+		}
+
+	}
+	
+	@GetMapping("/getAllOrder")
+	public List<Order> getAllOrder(){
+		List<Order> Orders = orderRepo.findAll();
+		return Orders;
+	}
+	
+	@GetMapping("/getOrder/{id}")
+	public Order getOrder(@PathVariable int id){
+		Optional<Order> Order = orderRepo.findById(id);
+		return Order.get();
+	}
+
+}

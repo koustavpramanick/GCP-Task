@@ -1,0 +1,45 @@
+package com.example.demo.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.Order;
+import com.example.demo.repository.OrderRepository;
+
+@RestController
+public class OrderController {
+	
+	@Autowired
+	OrderRepository orderRepository;
+	
+	@PostMapping("/saveOrder")
+	public Order saveOrder(@RequestBody Order order) {
+		Order odr = orderRepository.save(order);
+		if (odr != null) {
+			return odr;
+		} else {
+			return null;
+		}
+
+	}
+	
+	@GetMapping("/getAllOrder")
+	public List<Order> getAllOrder(){
+		List<Order> orders = orderRepository.findAll();
+		return orders;
+	}
+	
+	@GetMapping("/getOrder/{id}")
+	public Order getOrder(@PathVariable int id){
+		Optional<Order> order = orderRepository.findById(id);
+		return order.get();
+	}
+
+}
